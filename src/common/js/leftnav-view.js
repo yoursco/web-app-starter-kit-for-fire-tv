@@ -2,16 +2,16 @@
  *
  * Handles the display of main selectable categories on the
  * left side of the screen
- * 
+ *
  */
 (function (exports) {
     "use strict";
 
     //gloabl constants
     var CONTAINER_SCROLLING_LIST    = "#left-nav-scrolling-list",
-        
+
         CONTAINER_MAIN              = "#left-nav-list-container",
-        
+
         CLASS_MENU_ITEM_SELECTED    = "leftnav-list-item-selected",
 
         CLASS_MENU_ITEM_HIGHLIGHTED = "leftnav-list-item-highlighted",
@@ -25,7 +25,7 @@
     function LeftNavView() {
         // mixin inheritance, initialize this as an event handler for these events:
         Events.call(this, ['exit', 'deselect', 'indexChange', 'select', 'makeActive', 'loadComplete']);
-        
+
         this.scrollingContainerEle = null;
         this.leftNavContainerEle   = null;
         this.currentSelectionEle   = null;
@@ -48,7 +48,7 @@
         this.fadeIn = function() {
             this.$el.fadeIn();
         };
-        
+
        /**
         * Hides the left nav view
         */
@@ -68,13 +68,13 @@
         */
         this.collapse = function () {
             //change container to the collapsed class
-            this.leftNavContainerEle.classList.remove('leftnav-menulist-expanded');
-            this.leftNavContainerEle.classList.add('leftnav-menulist-collapsed');
+            // this.leftNavContainerEle.classList.remove('leftnav-menulist-expanded');
+            // this.leftNavContainerEle.classList.add('leftnav-menulist-collapsed');
 
             //set the chosen item style
-            this.setChosenElement(); 
+            this.setChosenElement();
 
-            //set flag to false 
+            //set flag to false
             this.isDisplayed = false;
             if (typeof this.leftNavItems[this.currSelectedIndex] === "object") {
                 this.leftNavItems[this.currSelectedIndex].deselect();
@@ -89,11 +89,11 @@
             this.leftNavContainerEle.classList.add('leftnav-menulist-expanded');
 
             //set the selected item style
-            this.setSelectedElement(); 
+            this.setSelectedElement();
 
             //set flag to true
             this.isDisplayed = true;
-            
+
             if (typeof this.leftNavItems[this.currSelectedIndex] === "object") {
                 // this is a hack for dealing with selecting the input box, we need to wait for it to appear
                 // TODO: Find out why this is and get a better solution.
@@ -102,7 +102,7 @@
         };
 
        /**
-        * Change the style of the selected element to selected 
+        * Change the style of the selected element to selected
         * @param {Element} ele currently selected element
         */
         this.setSelectedElement = function (ele) {
@@ -163,7 +163,7 @@
                 this.setCurrentSelectedIndex($(e.target).parent().index());
                 this.confirmNavSelection();
            }
-        }.bind(this); 
+        }.bind(this);
 
         /**
          * Creates the left nav view from the template and appends it to the given element
@@ -182,14 +182,14 @@
                 }
             }
             var html = utils.buildTemplate($("#left-nav-template"), {
-                leftNavItems:leftNavStrings 
+                leftNavItems:leftNavStrings
             });
             $el.append(html);
             this.$el = $el.children().last();
             this.$menuItems = $(CONTAINER_SCROLLING_LIST).children();
             for (i = 0; i < catData.length; i++) {
                 if (typeof catData[i] === "object") {
-                    catData[i].render(this.$menuItems.eq(i));   
+                    catData[i].render(this.$menuItems.eq(i));
                 }
             }
 
@@ -199,15 +199,16 @@
             this.scrollingContainerEle = $(CONTAINER_SCROLLING_LIST)[0];
             this.leftNavContainerEle   = $(CONTAINER_MAIN)[0];
 
-            //set default selected item 
-            this.setSelectedElement(this.currentSelectionEle); 
-            
-            this.shiftNavScrollContainer();
-            
+            //set default selected item
+            // this.setSelectedElement(this.currentSelectionEle);
+            this.setChosenElement(this.currentSelectionEle);
+
+            // this.shiftNavScrollContainer();
+
             //register touch handlers for the left-nav items
             touches.registerTouchHandler("leftnav-list-item-static", this.handleListItemSelection);
 
-            this.collapse();
+            // this.collapse();
 
             //send loadComplete event
             this.trigger('loadComplete');
@@ -216,10 +217,10 @@
 
        /**
         * Key event handler
-        * handles controls: LEFT : Return to last category 
-        *                   RIGHT: Load new category and hide nav 
-        *                   UP: Move selection up 
-        *                   DOWN: Move selection down 
+        * handles controls: LEFT : Return to last category
+        *                   RIGHT: Load new category and hide nav
+        *                   UP: Move selection up
+        *                   DOWN: Move selection down
         *                   BACK: Exit app
         * @param {event} the keydown event
         */
@@ -236,6 +237,8 @@
                     case buttons.UP:
                         if(this.isDisplayed) {
                             this.incrementCurrentSelectedIndex(-1);
+                        }else{
+                          this.expand(); // added
                         }
                         break;
                     case buttons.DOWN:
@@ -282,7 +285,7 @@
         }.bind(this);
 
        /**
-        * Increment the index of the currently selected item 
+        * Increment the index of the currently selected item
         * relative to the last selected index.
         * @param {number} direction to move the left nav
         */
@@ -309,20 +312,20 @@
         this.confirmNavSelection = function() {
             if(this.confirmedSelection !== this.currSelectedIndex) {
                 // switch the current view state to the main content view
-                var isObject = typeof this.leftNavItems[this.currSelectedIndex] === "object"; 
+                var isObject = typeof this.leftNavItems[this.currSelectedIndex] === "object";
                 var emptySearch = isObject && (this.leftNavItems[this.currSelectedIndex].currentSearchQuery === null || this.leftNavItems[this.currSelectedIndex].currentSearchQuery.length === 0);
                 if (emptySearch) {
                     return;
                 }
                 this.confirmedSelection = this.currSelectedIndex;
                 this.trigger('select', this.currSelectedIndex);
-            } 
+            }
             else if (this.searchUpdated) {
-                this.trigger('select', this.currSelectedIndex);   
+                this.trigger('select', this.currSelectedIndex);
             }
             else {
                 this.trigger('deselect');
-            }   
+            }
         };
 
        /**
@@ -333,9 +336,9 @@
             $(this.currentSelectionEle).removeClass(CLASS_MENU_ITEM_SELECTED);
 
             this.currentSelectionEle = this.$menuItems.eq(this.currSelectedIndex).children()[0];
-            this.setSelectedElement(this.currentSelectionEle); 
+            this.setSelectedElement(this.currentSelectionEle);
 
-            this.shiftNavScrollContainer();
+            // this.shiftNavScrollContainer();
 
             //shade the elements farther away from the selection
             this.trigger('indexChange', this.currSelectedIndex);
@@ -343,6 +346,8 @@
 
        /**
         * Move the nav container as new items are selected
+        * Currently Deactivated - Ryan 11/17/17
+        * TODO: Make this configurable
         */
         this.shiftNavScrollContainer = function() {
             if(!this.translateAmount) {

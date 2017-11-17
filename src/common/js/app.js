@@ -580,6 +580,7 @@
         this.transitionToLeftNavView = function() {
             this.selectView(this.leftNavView);
             this.leftNavView.setHighlightedElement();
+            this.leftNavView.expand(); // added
 
             //change size of selected shoveler item
             this.oneDView.shrinkShoveler();
