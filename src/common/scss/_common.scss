@@ -44,9 +44,9 @@ div {
 }
 
 .app-logo {
-    position : absolute;
-    bottom   : -7px;
-    right    : 150px;
+    position: absolute;
+    top: 70px;
+    left: 100px;
 }
 
 //
@@ -54,10 +54,10 @@ div {
 //
 .leftnav-main-container {
     position : absolute;
-    top    : 0;
+    top    : 240px;
     left   : 0;
     height : 100%;
-    width  : 44%;
+    width  : $left-nav-width; // 44%;
     margin : 0;
 }
 
@@ -75,6 +75,7 @@ div {
     height : 100%;
     top    : 0;
     z-index: 100;
+    padding-left: 50px;
 }
 
 .leftnav-menulist-collapsed {
@@ -111,9 +112,9 @@ div {
     word-wrap    : break-word;
     line-height  : $size-leftnav-line-height;
     font-weight: lighter;
-    font-size: 1.7em;
+    font-size: 1.6em;
     min-height : 90px;
-    padding      : 0 50px 0 $pos-left-content-position;
+    padding      : 20px 50px 25px $pos-left-content-position;
     overflow     : hidden;
     margin-bottom    : 2px;
     background-color : $color-menu-item-bg;
@@ -138,14 +139,17 @@ div {
 .leftnav-list-item-container .leftnav-list-item-selected {
     color     : $color-menu-item-selected-text;
     background: $color-menu-item-selected-bg $img-icon-leftnav no-repeat $pos-right-leftnav-arrow-icon center;
+    font-size: 1.8em;
+    border-radius: .3em;
 }
 
 .leftnav-list-item-chosen {
-    border-color : $color-menu-item-chosen-bg;
-    border-style : solid;
-    border-width : 1px 1px 1px 0px;
+    // border-color : $color-menu-item-chosen-bg;
+    // border-style : solid;
+    // border-width : 1px 1px 1px 0px;
     color      : $color-menu-item-chosen-text;
     background : $color-menu-item-chosen-bg $img-icon-leftnav no-repeat $pos-right-leftnav-arrow-icon center;
+    font-size: 1.8em;
 }
 
 .search-icon {
@@ -192,8 +196,8 @@ div {
 .one-D-details-container {
     position : absolute;
     top    : 0;
-    left   : 0;
-    width  : 100%;
+    left   : $left-nav-width; //40%;
+    width  : calc( 100% - #{$left-nav-width} ); // 60%;
     height : 100%;
     @include transition-property(visibility);
     @include transition-duration($ani-duration-maincontent-opacity);
@@ -531,13 +535,14 @@ div {
 // Next Video View
 //
 .next-video-main-container {
+    display: none;
     position : absolute;
     height   : 100%;
     width    : 30%;
     right    : 0;
     display  : flex;
     color    : $color-meta-secondary-text;
-    background-color : $color-player-controls-bg;
+    // background-color : $color-player-controls-bg;
     flex-direction : column;
 }
 
@@ -700,4 +705,3 @@ div {
         bottom : 10px;
     }
 }
-
