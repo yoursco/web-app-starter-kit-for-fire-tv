@@ -1,0 +1,274 @@
+{
+    "folders": [
+        {
+            "id": "1",
+            "title": "root",
+            "imgURL": "assets/l8.jpg",
+            "description": "",
+            "contents": [{"type": "folder", "id":"2"}, {"type": "folder", "id":"3"}, {"type": "folder", "id":"4"}]
+        },
+        {
+            "id": "2",
+            "title": "Magic Movies",
+            "imgURL": "assets/l11.jpg",
+            "description": "",
+            "contents": [
+              {"type": "media", "id": "magic-01"},
+              {"type": "media", "id": "magic-01"},
+              {"type": "media", "id": "magic-01"}
+            ]
+        },
+        {
+            "id": "3",
+            "title": "All Videos",
+            "imgURL": "assets/l6.jpg",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "description": "Newest season example description here.",
+            "contents": [{"type": "media", "id": "001"},
+                         {"type": "media", "id": "002"},
+                         {"type": "media", "id": "003"},
+                         {"type": "media", "id": "004"},
+                         {"type": "media", "id": "005"},
+                         {"type": "media", "id": "006"},
+                         {"type": "media", "id": "007"},
+                         {"type": "media", "id": "008"},
+                         {"type": "media", "id": "009"},
+                         {"type": "media", "id": "010"},
+                         {"type": "media", "id": "011"},
+                         {"type": "media", "id": "012"}
+                        ]
+        },
+        {
+            "id": "4",
+            "title": "Shared Channels",
+            "imgURL": "assets/l6.jpg",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "description": "Channels that have been shared with you.",
+            "contents": [
+              {"type": "folder", "id":"4-1"}, {"type": "folder", "id":"4-2"}
+            ]
+        },
+        {
+            "id": "4-1",
+            "title": "The Whittier Family",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Fwhittier%2FWhittier%20Poster.jpg?alt=media&token=29ad233d-bcbc-495f-b24c-9d0b0fc440e6",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "description": "Whittier Family's description here.",
+            "contents": [
+              {"type": "media", "id": "magic-02"},
+              {"type": "media", "id": "magic-02"},
+              {"type": "media", "id": "magic-02"}
+            ]
+        },
+        {
+            "id": "4-2",
+            "title": "The Dobson Family",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Fdobson%2FDobson%20Poster.jpg?alt=media&token=ff25bacd-444b-47de-a310-e2664c3d6179",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "description": "Dobson Family's description here.",
+            "contents": [
+              {"type": "media", "id": "magic-03"},
+              {"type": "media", "id": "magic-03"},
+              {"type": "media", "id": "magic-03"}
+            ]
+        }
+
+    ],
+    "media": [
+        {
+            "id": "magic-01",
+            "title": "The Tremblay Family",
+            "pubDate": "Mon, 21 Apr 2014 04:55:06 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FTremblay%20Poster.jpg?alt=media&token=ba4b48f7-12a3-4cb4-9a9d-cafd50b4db6d",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FTremblay%20Poster.jpg?alt=media&token=ba4b48f7-12a3-4cb4-9a9d-cafd50b4db6d",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FThe%20Tremblay%20Family%202_HD.mp4?alt=media&token=cce130f4-854c-4a16-86d7-2dc8079ce56f",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "magic-02",
+            "title": "The Whittier Family",
+            "pubDate": "Mon, 21 Apr 2014 04:55:06 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Fwhittier%2FWhittier%20Poster.jpg?alt=media&token=29ad233d-bcbc-495f-b24c-9d0b0fc440e6",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Fwhittier%2FWhittier%20Poster.jpg?alt=media&token=29ad233d-bcbc-495f-b24c-9d0b0fc440e6",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Fwhittier%2FThe%20Whittier%20Family%202_HD.mp4?alt=media&token=c866ce53-b144-49ae-a999-69d5e52442ed",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "magic-03",
+            "title": "The Dobson Family",
+            "pubDate": "Mon, 21 Apr 2014 04:55:06 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Fdobson%2FDobson%20Poster.jpg?alt=media&token=ff25bacd-444b-47de-a310-e2664c3d6179",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Fdobson%2FDobson%20Poster.jpg?alt=media&token=ff25bacd-444b-47de-a310-e2664c3d6179",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Fdobson%2FThe%20Dobson%20Family!_HD.mp4?alt=media&token=09db862d-5a5c-48a3-b123-065a8cc3f4bd",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "001",
+            "title": "IMG_FullSizeRender",
+            "pubDate": "Mon, 21 Apr 2014 04:55:06 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FFullSizeRender%20FRAME.png?alt=media&token=a8f68400-3b40-40b4-87a0-ff1b6ea4fa5d",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FFullSizeRender%20FRAME.png?alt=media&token=a8f68400-3b40-40b4-87a0-ff1b6ea4fa5d",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FFullSizeRender.TRIM_1.mp4?alt=media&token=bee6e6b8-93d8-41ca-ac60-4d2121f2dcb4",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "002",
+            "title": "IMG_FullSizeRenderTrim2",
+            "pubDate": "Fri, 18 Jan 2013 19:05:13 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FFullSizeRender.TRIM%202%20FRAME.png?alt=media&token=ce2ebcf7-2652-4184-ab32-f72a8f8d5865",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FFullSizeRender.TRIM%202%20FRAME.png?alt=media&token=ce2ebcf7-2652-4184-ab32-f72a8f8d5865",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FFullSizeRender.TRIM%202_1.mp4?alt=media&token=9bcdb120-b701-4ce3-ba85-88c60f6fffc6",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "003",
+            "title": "IMG_1091",
+            "pubDate": "Mon, 10 Mar 2014 19:57:54 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1091_FRAME.png?alt=media&token=d622a37e-3ee3-41b9-bd76-9beb09ae3725",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1091_FRAME.png?alt=media&token=d622a37e-3ee3-41b9-bd76-9beb09ae3725",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1091_1.mp4?alt=media&token=03549a95-7bfd-41b5-aef8-0ffad2e3af34",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "004",
+            "title": "IMG_1100",
+            "pubDate": "Thu, 11 Apr 2013 11:09:49 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1100_FRAME.png?alt=media&token=6f7f69d1-6e5b-43ec-bff1-0e0203fcda43",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1100_FRAME.png?alt=media&token=6f7f69d1-6e5b-43ec-bff1-0e0203fcda43",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1100_1.mp4?alt=media&token=b2d7b740-2cc2-44c7-8a33-6dd125d9869d",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "005",
+            "title": "IMG_1143",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1143_FRAME.png?alt=media&token=10e0d42d-11b9-40f0-b78c-1a055d8639d3",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1143_FRAME.png?alt=media&token=10e0d42d-11b9-40f0-b78c-1a055d8639d3",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1143_1.mp4?alt=media&token=a7948554-c778-4d45-b97d-957d47829162",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "006",
+            "title": "IMG_1152",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1152_FRAME.png?alt=media&token=c284fb60-f3b1-451c-8566-8d4174621078",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1152_FRAME.png?alt=media&token=c284fb60-f3b1-451c-8566-8d4174621078",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1152_1.mp4?alt=media&token=aa954b01-4460-41fb-8554-d424cb5779b8",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "007",
+            "title": "IMG_1198",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1198_FRAME.png?alt=media&token=0b9187f9-6744-4ff1-8f8d-639fa8738163",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1198_FRAME.png?alt=media&token=0b9187f9-6744-4ff1-8f8d-639fa8738163",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1198_1.mp4?alt=media&token=5b5252c9-5759-4be1-adac-5707b95f2a2f",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "008",
+            "title": "IMG_1307",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1307_FRAME.png?alt=media&token=6e713916-5321-40dd-b851-021a6594b2c5",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1307_FRAME.png?alt=media&token=6e713916-5321-40dd-b851-021a6594b2c5",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1307_1.mp4?alt=media&token=d5efa5e9-10f2-47da-8ec0-63e7739b0aca",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "009",
+            "title": "IMG_1316",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1316_FRAME.png?alt=media&token=a5e4324f-28dd-4872-9e8b-59bedbe49164",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1316_FRAME.png?alt=media&token=a5e4324f-28dd-4872-9e8b-59bedbe49164",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_1316_1.mp4?alt=media&token=59af8c2d-4600-4ec7-af29-106709a9854d",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "010",
+            "title": "IMG_6691",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_6691_FRAME.png?alt=media&token=7a3d5000-b01d-4422-a7e1-dc4c7e0de728",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_6691_FRAME.png?alt=media&token=7a3d5000-b01d-4422-a7e1-dc4c7e0de728",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_6691_1.mp4?alt=media&token=163c91de-96ca-4170-b0ac-d0cbaff47014",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "011",
+            "title": "IMG_6783",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_6783_FRAME.png?alt=media&token=2bbfdaf5-2533-443b-b2d8-5dcb105093fc",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_6783_FRAME.png?alt=media&token=2bbfdaf5-2533-443b-b2d8-5dcb105093fc",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_6783_1.mp4?alt=media&token=9fbeee57-fdb4-4939-b79c-dd095223d83d",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        },
+        {
+            "id": "012",
+            "title": "IMG_8072",
+            "pubDate": "Sun, 26 May 2013 07:22:41 GMT",
+            "thumbURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FImg_8072_FRAME.png?alt=media&token=05f34a30-e171-4090-8974-45c7781bae91",
+            "imgURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FImg_8072_FRAME.png?alt=media&token=05f34a30-e171-4090-8974-45c7781bae91",
+            "videoURL": "https://firebasestorage.googleapis.com/v0/b/yours-app-ea7c8.appspot.com/o/streaming-test%2Ftremblay%2FIMG_8072_1.mp4?alt=media&token=56b5192e-b562-4ae5-a163-f99155cd76c2",
+            "type": "video",
+            "categories": [
+                "Raw Videos"
+            ],
+            "description": ""
+        }
+    ]
+}

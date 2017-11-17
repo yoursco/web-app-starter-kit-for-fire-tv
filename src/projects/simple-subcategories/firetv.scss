@@ -1,3 +1,31 @@
+$color-bg: #23313A;
+$color-highlight: #42CACC;
+$color-text-highlighted: #fff;
+$color-text-unselected: #5A6977;
+
+// Overrides
+$img-app-background: none;
+$img-icon-leftnav: none;
+
+$color-app-base-bg: $color-bg;
+$color-app-header-bg: none;
+$color-menu-base-bg: $color-bg;
+$color-menu-item-bg: $color-bg;
+$color-menu-item-text: $color-text-unselected;
+$color-menu-search-text: $color-text-unselected;
+$color-menu-item-selected-text: $color-text-highlighted;
+$color-menu-item-selected-bg: $color-highlight;
+$color-menu-item-chosen-text: $color-highlight;
+$color-menu-item-chosen-bg: $color-bg;
+
+$left-nav-width: 30%;
+$pos-left-content-position: 70px;
+
+input#search-input::placeholder {
+    color: $color-text-unselected;
+    font-weight: 400;
+}
+
 @import "../../common/scss/variables";
 
 @import "../../common/scss/mixins";
