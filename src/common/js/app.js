@@ -200,6 +200,30 @@
 
        /***************************
         *
+        * Login View Object
+        *
+        **************************/
+        this.initializeLoginView = function() {
+            console.log("initializing loginView...");
+            var loginView = this.loginView = new LoginView();
+            
+           /**
+            * Event Handler - When the left nav is loaded remove the
+            *                 app overlay until the content is loaded
+            */
+            loginView.on('loginStarted', function() {
+                this.loadingSpinner.hide.all();
+            }, this);
+
+            loginView.on('loginComplete', function () {
+                this.loadingSpinner.show.all();
+            }, this);
+
+            loginView.render(app.$appContainer, app.regCode);
+        };
+
+       /***************************
+        *
         * Left Nav View Object
         *
         **************************/
