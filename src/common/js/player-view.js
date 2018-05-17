@@ -240,6 +240,26 @@
             this.handleClosedCaptioning(video_data.tracks);
             this.$el.append(this.videoElement);
 
+            
+            if (Hls.isSupported()) {
+                var hls = new Hls();
+                hls.loadSource(video_data.videoURL);
+                hls.attachMedia(this.videoElement);
+                hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                    // this.playVideo();
+                    console.log("HLS Manifest parsed.")
+                });
+            }
+            // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+            // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
+            // This is using the built-in support of the plain video element, without using hls.js.
+            else if (this.videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                this.videoElement.src = video_data.videoURL;
+                // this.videoElement.addEventListener('canplay', function () {
+                //     video.play();
+                // });
+            }
+
             this.videoElement.focus();
 
             //add event listeners
