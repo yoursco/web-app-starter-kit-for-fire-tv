@@ -27,6 +27,7 @@
         "data.json",
     ],
     "appJS" : [
+        "../../common/js/cookies.js",
         "../../common/js/util.js",
         "../../common/js/error-handler.js",
         "../../common/js/dialog-view.js",
@@ -36,18 +37,20 @@
         "../../common/js/touches.js",
         "../../common/js/leftnav-view.js",
         "../../common/js/one-d-view.js",
+        "../../common/js/login-view.js",
         "../../common/js/shoveler-view.js",
         "../../common/js/subcat-view.js",
         "../../common/js/player-view.js",
         "../../common/js/playlist-player-view.js",
         "../../common/js/controls-view.js",
         "../../common/js/search-input-view.js",
-        "../../common/js/model-json.js",
+        "../../common/js/model-yours.js",
         "../../common/js/app.js",
         "init.js"
     ],
     "libJS" : [
         "../../libs/jquery.js",
-        "../../libs/handlebars-v1.3.0.js"
+        "../../libs/handlebars-v1.3.0.js",
+        "../../libs/hls.min.js"
     ]
 }
