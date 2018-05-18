@@ -1012,7 +1012,87 @@
             errorHandler.informDev(errType, errType.errToDev, errStack);
         }.bind(this));
 
+        this.init = function () {
         this.makeInitialDataCall();
+    }
+
+        this.checkRegistrationCode = function () {
+            var regCodePoll = setInterval(function () {
+                $.ajax({
+                    method: "GET",
+                    url:this.baseUrl + "/ott/login/checkCode/" + this.regCode,
+                    context: this,
+                }
+            ).done(function (result) {
+                console.log("checking "+this.regCode, "status: "+result.status);
+                if (result.status != "complete") return;
+                
+                clearInterval(regCodePoll);
+                // 4. on valid authorization, set this.authToken 
+                this.authToken = "device:" + result.deviceId + ":" + result.token;
+                this.userId = result.userId;
+
+                if (!Cookies.hasItem("yoursco")) {
+                    Cookies.setItem("yoursco", JSON.stringify(result)  );
+                }
+                // 5. continue to makeInitialDataCall
+                this.loginView.trigger("loginComplete");
+                this.init();
+            }.bind(this));
+        }.bind(this), 2000)
+        // var baseUrl = "http://10.0.1.134:5000/yours-app-ea7c8/us-central1";
+        }.bind(this)
+
+        this.getRegistrationCode = function () {
+            $.ajax({
+                url: this.baseUrl + "/ott/login/preRegister",
+                method: "POST",
+                context: this,
+                data: {
+                    deviceTypeId: "fireTv",
+                    firmwareVersion: "1.0"
+                }
+            })
+            .done(function(result){
+                console.log("getRegistrationCode:",{result})
+                if(result.status === "success"){
+                    // 2. get regCode
+                    this.regCode = result.regCode;
+                    this.initializeLoginView(this.$appContainer, this.regCode);
+                    // 3. poll for authorization 
+                    this.checkRegistrationCode();
+                } else {
+                    // TODO: handle errors getting regCode;
+                    return console.error("Getting registration code failed.");
+                }
+                
+            });
+        }.bind(this);
+
+        this.getAuthToken = function(device){
+            return "device:" + device.deviceId + ":" + device.token;
+        }.bind(this)
+
+        // Initialization
+        // 1. Check for authToken
+        // 2. Transition to login view 
+        // 3. Request for regCode
+        // 4. Poll to check for authorization 
+        // 5. on valid authorization, set this.authToken 
+        // 6. continue to makeInitialDataCall (this.init())
+        if(this.authToken){
+            //TODO: need to make sure this.authToken gets set from cookie on new session
+            this.init();
+        } else if (Cookies.hasItem("yoursco")){
+            this.device = JSON.parse(Cookies.getItem("yoursco"));
+            this.authToken = this.getAuthToken(this.device); 
+            this.userId = this.device.userId
+    
+            this.init();
+        } else {
+            this.getRegistrationCode();
+        }        
+        
     }
 
     exports.App = App;

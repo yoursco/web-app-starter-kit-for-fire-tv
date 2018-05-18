@@ -50,6 +50,23 @@ div {
 }
 
 //
+// Login Styles
+//
+.login-container {
+    height: 100%;
+    width: 100%;
+    display: table;
+    color: white;
+    font-size: 2em;
+}
+.login-details {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+}
+//
 // Left Nav Styles
 //
 .leftnav-main-container {
