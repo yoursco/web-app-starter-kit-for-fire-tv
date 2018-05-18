@@ -24,7 +24,7 @@
         "../../common/images/btn_previewPlay.png",
         "../../common/assets/video/*",
         "../../common/assets/images/*",
-        "data.json",
+        "data.json"
     ],
     "appJS" : [
         "../../common/js/cookies.js",
