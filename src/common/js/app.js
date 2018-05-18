@@ -95,11 +95,12 @@
             }
 
             // quick template render to add the logo to the app, probably doesnt need an entire view since its one line
-            if (app.data.appLogo) {
-                logo = app.data.appLogo;
+            if (app.settingsParams.appLogo) {
+                logo = app.settingsParams.appLogo;
+                
             }
             else {
-                logo = "assets/logo-circle.png";
+                logo = "assets/img_logo.png";
             }
 
             var html = utils.buildTemplate($("#app-header-template"), {

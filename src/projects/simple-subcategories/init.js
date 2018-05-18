@@ -9,7 +9,7 @@
         dataURL: "./assets/data.json",
         showSearch: false,
         displayButtons:false,
-        appLogo: "./logo-circle.png"
+        appLogo: "./assets/logo-circle.png"
     };
 
     exports.app = new App(settings);
