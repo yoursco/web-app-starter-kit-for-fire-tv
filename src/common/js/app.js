@@ -71,6 +71,8 @@
         //hold onto the app settings
         this.settingsParams = settingsParams;
         this.showSearch = settingsParams.showSearch;
+        // this.baseUrl = "http://10.0.1.134:5000/yours-app-ea7c8/us-central1";
+        this.baseUrl = "http://localhost:5000/yours-app-ea7c8/us-central1";
 
         //main application container div
         this.$appContainer = $("#app-container");
