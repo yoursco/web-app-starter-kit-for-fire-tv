@@ -955,7 +955,7 @@
         }.bind(this);
 
         //initialize the model and get the first data set
-        this.data = new this.settingsParams.Model(this.settingsParams);
+        this.data = new this.settingsParams.Model(this.settingsParams, this);
 
         // handle errors from the model
         this.data.on("error", function(errType, errStack) {

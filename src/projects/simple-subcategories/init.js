@@ -3,7 +3,7 @@
 
     //initialize the app
     var settings = {
-        Model: JSONMediaModel,
+        Model: YoursMediaModel,
         PlayerView: PlayerView,
         PlaylistView: PlaylistPlayerView,
         dataURL: "./assets/data.json",
